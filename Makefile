@@ -1,7 +1,7 @@
-DOCKER_IMAGE_NAME    := danguita/mapcrafter
-DOCKER_BUILD         := docker build --file Dockerfile
 MINECRAFT_WORLD_NAME := "MyWorld"
 MINECRAFT_SAVES_PATH := "$(HOME)/Library/Application Support/minecraft/saves"
+DOCKER_IMAGE_NAME    := danguita/mapcrafter
+DOCKER_BUILD         := docker build --file Dockerfile
 DOCKER_RUN           := docker run -it --rm -v $(shell pwd):/data -v $(MINECRAFT_SAVES_PATH):/data/worlds
 
 build: Dockerfile

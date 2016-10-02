@@ -1,5 +1,7 @@
 # Mapcrafter Docker image and configuration tool
 
+[![](https://images.microbadger.com/badges/image/danguita/mapcrafter.svg)](https://microbadger.com/images/danguita/mapcrafter "Get your own image badge on microbadger.com")
+
 This image contains [Mapcrafter](http://mapcrafter.org/index) 2.1 and all its dependencies.
 
 There is also a [config file template](render.template.conf) which will be processed within a `run` script, and a `Makefile` to assist users on repeating tasks, providing the following targets:

@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
-MAINTAINER David Anguita <david@davidanguita.name>
+MAINTAINER Lucy Davies <lucy@lucymhdavies.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV MAPCRAFTER_VERSION=2.1-1 MAPCRAFTER_ARCH=amd64
+ENV MAPCRAFTER_VERSION=2.3-1 MAPCRAFTER_ARCH=amd64
 ENV MAPCRAFTER_PACKAGE=mapcrafter_${MAPCRAFTER_VERSION}_${MAPCRAFTER_ARCH}.deb
 
 RUN apt-get update

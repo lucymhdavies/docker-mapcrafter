@@ -13,5 +13,10 @@ clean_build: Dockerfile
 run:
 	$(DOCKER_RUN) -e WORLD_NAME=$(MINECRAFT_WORLD_NAME) $(DOCKER_IMAGE_NAME) /data/run.sh
 
-upload:
-	aws s3 sync ./render/Davinhart\ Kingdom s3://davinhart-kingdom/
+serve:
+	docker run --name minecraft-map -v $(shell pwd)/render/Davinhart\ Kingdom/:/usr/share/nginx/html:ro -p 8080:80 -d nginx
+	ngrok http 8080
+	docker rm -f minecraft-map
+
+#upload:
+#	aws s3 sync ./render/Davinhart\ Kingdom s3://davinhart-kingdom/

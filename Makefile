@@ -21,7 +21,7 @@ force_run:
 
 serve:
 	docker run --name minecraft-map -v $(shell pwd)/render/Davinhart\ Kingdom/:/usr/share/nginx/html:ro -p 8080:80 -d nginx
-	ngrok http 8080
+	ngrok http -region eu 8080
 	docker rm -f minecraft-map
 
 #upload:

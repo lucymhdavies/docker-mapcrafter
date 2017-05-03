@@ -1,3 +1,5 @@
 /render.conf
 /render
 *.swp
+/worlds/*
+creds

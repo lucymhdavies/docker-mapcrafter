@@ -3,3 +3,4 @@
 *.swp
 /worlds/*
 creds
+loop.sh

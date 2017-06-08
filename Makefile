@@ -14,7 +14,9 @@ download:
 	$(DOCKER_RUN) $(DOCKER_IMAGE_NAME) /data/download.sh
 
 run:
-	$(DOCKER_RUN) -e WORLD_NAME=$(MINECRAFT_WORLD_NAME) $(DOCKER_IMAGE_NAME) /data/run.sh
+	#$(DOCKER_RUN) -e WORLD_NAME=$(MINECRAFT_WORLD_NAME) $(DOCKER_IMAGE_NAME) /data/run.sh
+	echo $(docker rmi lucymhdavies/mapcrafter-dockerfile:latest) # in a shell, to ensure exit status 0
+	docker run -it --rm -v $(shell pwd):/data lucymhdavies/mapcrafter-dockerfile:latest -c /data/render.conf
 
 force_run:
 	$(DOCKER_RUN) -e WORLD_NAME=$(MINECRAFT_WORLD_NAME) $(DOCKER_IMAGE_NAME) /data/run.sh -F
